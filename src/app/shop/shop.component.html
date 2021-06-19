@@ -1,0 +1,24 @@
+  <div class="row" style="padding-left: 20px;">
+      <div class="col-3" style="padding-top:25px;" *ngFor="let product of productList; let i = index">
+        <div class="card" style="width: 18rem;">
+            <img style="height:180px;width:286px" class="card-img-top" [src]="product?.image" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{product?.name}}</h5>
+              <p class="card-text" style="font-size:12px" *ngIf="product.showDetails">
+                {{product?.description}}
+              </p>
+              <span>Rs.{{product.price}}</span>
+              <span style="float: right;">
+                <i class="fa fa-minus" aria-hidden="true" (click)="decrement(product)"></i>&nbsp;&nbsp;
+                <span>{{product?.purchaseQty ? product?.purchaseQty : 0}}</span>&nbsp;&nbsp;
+                <i class="fa fa-plus" aria-hidden="true" (click)="increment(product)"></i>
+              </span>
+              <br><br>
+              <div>
+                <button type="button" class="btn btn-primary" style="float: left;" (click)="showDetails(product)">{{(product.showDetails ? 'Hide Details' : 'Show Details')}}</button>
+                <button type="button" class="btn btn-success" style="float: right;" (click)="addToCart(product)">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+      </div>
+</div>

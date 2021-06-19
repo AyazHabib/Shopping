@@ -1,0 +1,20 @@
+.center-tbl {
+    margin: 10% 25% 5% 25%;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.trash-color {
+    font-size:25px;
+    color:red
+}

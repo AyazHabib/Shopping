@@ -1,0 +1,31 @@
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="mdb logo">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ><span class="header-name">My Shopping</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" ><span class="header-name"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+            [routerLink]="['/shop']"
+            ><span class="home" [ngClass]="{'active': activeHome === true}"
+            (click)="home()">Home</span></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" (click)="navigateToCheckout()"><i class="fa fa-shopping-basket icon-feat">13</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+  <!-- Navbar -->
+</header>

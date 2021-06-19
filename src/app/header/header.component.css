@@ -1,0 +1,17 @@
+.header-name {
+    font-weight: 700;
+    color:#6a5bd3;
+}
+
+i.icon-feat {
+    color: #645aad;
+    font-size: 20px;
+}
+
+.home {
+    font-weight: 700;
+    color:#0b91e0e8;
+}
+.active {
+    text-decoration : underline
+}
