@@ -16,7 +16,7 @@
               <br><br>
               <div>
                 <button type="button" class="btn btn-primary" style="float: left;" (click)="showDetails(product)">{{(product.showDetails ? 'Hide Details' : 'Show Details')}}</button>
-                <button type="button" class="btn btn-success" style="float: right;" (click)="addToCart(product)">Add to Cart</button>
+                <button type="button" [disabled]="!product?.purchaseQty" class="btn btn-success" style="float: right;" (click)="addToCart(product)">Add to Cart</button>
               </div>
             </div>
           </div>

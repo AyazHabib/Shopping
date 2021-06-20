@@ -21,7 +21,10 @@
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link" (click)="navigateToCheckout()"><i class="fa fa-shopping-basket icon-feat">13</i>
+                <a class="nav-link" (click)="navigateToCheckout()">
+                  <i class="fa fa-shopping-basket icon-feat">
+                    {{(cartItems$| async)?.length}}
+                  </i>
                 </a>
             </li>
         </ul>

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { CartItems } from '../model/cartItem';
+import { CartItemsQuery } from '../query/cartItem.query';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +11,8 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   public activeHome: boolean = true;
-  constructor(private router: Router) { }
+  cartItems$: Observable<CartItems[]> = this.cartItemsQuery.selectAll();
+  constructor(private router: Router,private cartItemsQuery: CartItemsQuery) { }
 
   ngOnInit(): void {
   }
